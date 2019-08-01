@@ -28,13 +28,19 @@
   </url>
   
   <url>
-    <loc>https://eagowang.github.io/tags/taga/</loc>
+    <loc>https://eagowang.github.io/tags/react/</loc>
     <lastmod>2019-08-01T20:56:06+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://eagowang.github.io/tags/tagb/</loc>
+    <loc>https://eagowang.github.io/tags/%E5%BC%B9%E7%AA%97/</loc>
+    <lastmod>2019-08-01T20:56:06+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://eagowang.github.io/tags/%E9%AB%98%E9%98%B6%E7%BB%84%E4%BB%B6/</loc>
     <lastmod>2019-08-01T20:56:06+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -317,12 +323,6 @@
   
   <url>
     <loc>https://eagowang.github.io/categories/react/</loc>
-    <lastmod>2019-06-08T11:23:07+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://eagowang.github.io/tags/react/</loc>
     <lastmod>2019-06-08T11:23:07+08:00</lastmod>
     <priority>0</priority>
   </url>
