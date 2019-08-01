@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8" />
+
+  
+  <title>[学习]css知识点</title>
+
+  
+  
+  <link href="//cdn.jsdelivr.net" rel="dns-prefetch">
+  <link href="//cdnjs.cloudflare.com" rel="dns-prefetch">
+  
+  <link href="//at.alicdn.com" rel="dns-prefetch">
+  
+  <link href="//fonts.googleapis.com" rel="dns-prefetch">
+  <link href="//fonts.gstatic.com" rel="dns-prefetch">
+  
+  
+  <link href="//imsun.github.io" rel="dns-prefetch">
+  
+  
+
+  
+
+  
+  <meta name="author" content="eago">
+  <meta name="description" content="基础 盒子模型 margin,border,padding,content(外边距，边框，内边距，内容) 常说的元素的 width，height 指的">
+
+  
+  
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@gohugoio">
+    <meta name="twitter:title" content="[学习]css知识点">
+    <meta name="twitter:description" content="基础 盒子模型 margin,border,padding,content(外边距，边框，内边距，内容) 常说的元素的 width，height 指的">
+    <meta name="twitter:image" content="/images/avatar.png">
+  
+
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="[学习]css知识点">
+  <meta property="og:description" content="基础 盒子模型 margin,border,padding,content(外边距，边框，内边距，内容) 常说的元素的 width，height 指的">
+  <meta property="og:url" content="https://eagowang.github.io/post/%E5%AD%A6%E4%B9%A0css%E7%9F%A5%E8%AF%86%E7%82%B9/">
+  <meta property="og:image" content="/images/avatar.png">
+
+
+
+
+<meta name="generator" content="Hugo 0.56.1">
+
+
+<link rel="canonical" href="https://eagowang.github.io/post/%E5%AD%A6%E4%B9%A0css%E7%9F%A5%E8%AF%86%E7%82%B9/">
+
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="format-detection" content="telephone=no,email=no,adress=no">
+<meta http-equiv="Cache-Control" content="no-transform">
+
+
+<meta name="robots" content="index,follow">
+<meta name="referrer" content="origin-when-cross-origin">
+
+
+
+
+
+
+
+<meta name="theme-color" content="#02b875">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="eago">
+<meta name="msapplication-tooltip" content="eago">
+<meta name='msapplication-navbutton-color' content="#02b875">
+<meta name="msapplication-TileColor" content="#02b875">
+<meta name="msapplication-TileImage" content="/icons/icon-144x144.png">
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/icon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-32x32.png">
+<link rel="icon" sizes="192x192" href="/icons/icon-192x192.png">
+<link rel="apple-touch-icon" href="/icons/icon-152x152.png">
+<link rel="manifest" href="/manifest.json">
+
+
+<link rel="preload" href="/styles/main-rendered.min.css" as="style">
+
+
+<link rel="preload" href="https://fonts.googleapis.com/css?family=Lobster" as="style">
+<link rel="preload" href="/images/avatar.png" as="image">
+<link rel="preload" href="/images/grey-prism.svg" as="image">
+
+
+<style>
+  body {
+    background: rgb(244, 243, 241) url('/images/grey-prism.svg') repeat fixed;
+  }
+</style>
+<link rel="stylesheet" href="/styles/main-rendered.min.css">
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.2/dist/medium-zoom.min.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/video.js@7.3.0/dist/video-js.min.css">
+
+
+
+  
+  
+<!--[if lte IE 8]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/videojs-ie8@1.1.2/dist/videojs-ie8.min.js"></script>
+<![endif]-->
+
+<!--[if lte IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/eligrey-classlist-js-polyfill@1.2.20180112/classList.min.js"></script>
+<![endif]-->
+
+
+</head>
+  <body>
+    <div class="suspension">
+      <a role="button" aria-label="Go to top" title="Go to top" class="to-top is-hide"><span class="icon icon-up" aria-hidden="true"></span></a>
+      
+        
+	<a role="button" aria-label="Go to comments" title="Go to comments" class="to-comment" href="#gitment-container"><span class="icon icon-comment" aria-hidden="true"></span></a>
+        
+      
+    </div>
+    
+    
+  <header class="site-header">
+  <a href="https://eagowang.github.io/"><img class="avatar" src="/images/avatar.png" alt="Avatar"></a>
+  
+  <h2 class="title"><a href="https://eagowang.github.io/">eago</a></h2>
+  
+  <p class="subtitle"></p>
+  <button class="menu-toggle" type="button" aria-label="Main Menu" aria-expanded="false" tab-index="0">
+    <span class="icon icon-menu" aria-hidden="true"></span>
+  </button>
+
+  <nav class="site-menu collapsed">
+    <h2 class="offscreen">Main Menu</h2>
+    <ul class="menu-list">
+      
+      
+      
+      
+        <li class="menu-item
+          
+          
+           is-active">
+          <a href="/">主页</a>
+        </li>
+      
+        <li class="menu-item
+          
+          
+          ">
+          <a href="/post/">归档</a>
+        </li>
+      
+        <li class="menu-item
+          
+          
+          ">
+          <a href="/tags/">标签</a>
+        </li>
+      
+        <li class="menu-item
+          
+          
+          ">
+          <a href="/categories/">分类</a>
+        </li>
+      
+        <li class="menu-item
+          
+          
+          ">
+          <a href="/post/resume/">简历</a>
+        </li>
+      
+    </ul>
+  </nav>
+  <nav class="social-menu collapsed">
+    <h2 class="offscreen">Social Networks</h2>
+    <ul class="social-list"></ul>
+  </nav>
+</header>
+
+  <section class="main post-detail">
+    <header class="post-header">
+      <h1 class="post-title">[学习]css知识点</h1>
+      <p class="post-meta">@eago · Jun 12, 2019 · 4 min read</p>
+    </header>
+    <article class="post-content">
+
+<h2 id="基础">基础</h2>
+
+<h3 id="盒子模型">盒子模型</h3>
+
+<p>margin,border,padding,content(外边距，边框，内边距，内容)</p>
+
+<p><img src="https://mdn.mozillademos.org/files/8685/boxmodel-(3).png" alt="image" /></p>
+
+<blockquote>
+<p>常说的元素的 width，height 指的是 content 的宽度和高度。这跟我们的潜意识不符，可以用 box-sizing 属性来修改（border-box,content-box）</p>
+</blockquote>
+
+<h3 id="选择器">选择器</h3>
+
+<p>常用的：</p>
+
+<p>1.id,class,元素，后代</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-css" data-lang="css"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-css" data-lang="css"><span class="c">/*id*/</span>
+<span class="p">#</span><span class="nn">wrap</span> <span class="p">{</span>
+<span class="p">}</span>
+<span class="c">/*class*/</span>
+<span class="p">.</span><span class="nc">main</span> <span class="p">{</span>
+<span class="p">}</span>
+<span class="c">/*元素*/</span>
+<span class="nt">body</span> <span class="p">{</span>
+<span class="p">}</span>
+<span class="c">/*后代*/</span>
+<span class="nt">table</span> <span class="nt">tr</span> <span class="p">{</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>2.伪类选择器</p>
+
+<p>伪类选择器，表现为给这个元素加一个类（伪类）,用单冒号:</p>
+
+<ul>
+<li>:link</li>
+<li>:visited</li>
+<li>:hover</li>
+<li>:active</li>
+<li>:focus</li>
+<li>:first-child</li>
+<li>:last-child</li>
+<li>:nth-child</li>
+</ul>
+
+<p>例子：(顺序不能变)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-css" data-lang="css"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-css" data-lang="css"><span class="nt">a</span><span class="p">:</span><span class="nd">link</span> <span class="p">{</span>
+  <span class="k">color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">a</span><span class="p">:</span><span class="nd">visited</span> <span class="p">{</span>
+  <span class="k">color</span><span class="p">:</span> <span class="kc">green</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">a</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span>
+  <span class="k">color</span><span class="p">:</span> <span class="kc">yellow</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">a</span><span class="p">:</span><span class="nd">active</span> <span class="p">{</span>
+  <span class="k">color</span><span class="p">:</span> <span class="kc">pink</span><span class="p">;</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>3.伪元素选择器
+伪元素选择器，表现为加一个元素（伪元素）,用双冒号::</p>
+
+<ul>
+<li>::before</li>
+<li>::after</li>
+<li>::first-letter</li>
+</ul>
+
+<p>例子：(title 前面添加一个小方块)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-css" data-lang="css"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">main</span><span class="p">::</span><span class="nd">before</span> <span class="p">{</span>
+  <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
+  <span class="k">content</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+  <span class="k">width</span><span class="p">:</span> <span class="mi">2</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">height</span><span class="p">:</span> <span class="mi">12</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">background</span><span class="p">:</span> <span class="kc">orange</span><span class="p">;</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="优先级">优先级</h3>
+
+<p>首先，内联样式&gt;外部样式（也就是 style 最大）</p>
+
+<p>其次，不同选择器的优先级也不同：</p>
+
+<ol>
+<li>元素选择器，伪元素选择器（权重 1）</li>
+<li>类选择器，属性选择器，伪类选择器（权重 10）</li>
+<li>id 选择器（权重 100）</li>
+</ol>
+
+<p>!important 例外，当一个样式声明的!important 时，此声明将覆盖其他任何声明。（!imortant 不能乱用）</p>
+
+<p>总结：</p>
+
+<blockquote>
+<p>!important&gt;行内样式&gt;ID 选择器 &gt; 类选择器 | 属性选择器 | 伪类选择器 &gt; 元素选择器</p>
+</blockquote>
+
+<h3 id="css-动画">css 动画</h3>
+
+<h4 id="transition">transition</h4>
+
+<p>过渡，只能定义起止状态，而且需要特定的触发时机，比如:hover，或者动态添加 class 或者 style</p>
+
+<p>使用方式：property name | duration | timing function | delay</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-css" data-lang="css"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">a</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span>
+  <span class="k">transition</span><span class="p">:</span> <span class="k">margin</span><span class="o">-</span><span class="kc">right</span> <span class="mi">4</span><span class="kt">s</span> <span class="kc">ease</span><span class="o">-</span><span class="n">in-out</span> <span class="mi">1</span><span class="kt">s</span><span class="p">;</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h4 id="animation">animation</h4>
+
+<p>animation 可以设置动画的多个状态（不只是起止，使用%）,不需要特定的触发时机。还可以设置循环次数，动画方向，动画结束状态</p>
+
+<p>使用方式： name | duration | timing-function | delay |
+iteration-count | direction | fill-mode | play-state</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-css" data-lang="css"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">block</span> <span class="p">{</span>
+  <span class="k">animation</span><span class="p">:</span> <span class="n">slidein</span> <span class="mi">1</span><span class="kt">s</span> <span class="kc">linear</span> <span class="mi">1</span><span class="kt">s</span> <span class="kc">infinite</span> <span class="kc">normal</span> <span class="kc">forwards</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">@</span><span class="k">keyframes</span> <span class="nt">slidein</span> <span class="p">{</span>
+  <span class="nt">from</span><span class="o">:</span> <span class="p">{</span>
+    <span class="k">margin-left</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nt">to</span><span class="o">:</span> <span class="p">{</span>
+    <span class="k">margin-left</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="浮动和清除浮动">浮动和清除浮动</h3>
+
+<p>以前使用浮动，主要是为了自适应布局（左浮动，右浮动，中间自适应）</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-css" data-lang="css"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">wrap</span> <span class="p">{</span>
+  <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
+  <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">left</span> <span class="p">{</span>
+  <span class="k">float</span><span class="p">:</span> <span class="kc">left</span><span class="p">;</span>
+  <span class="k">background</span><span class="p">:</span> <span class="kc">cadetblue</span><span class="p">;</span>
+  <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">right</span> <span class="p">{</span>
+  <span class="k">float</span><span class="p">:</span> <span class="kc">right</span><span class="p">;</span>
+  <span class="k">background</span><span class="p">:</span> <span class="kc">rebeccapurple</span><span class="p">;</span>
+  <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">mid</span> <span class="p">{</span>
+  <span class="k">background</span><span class="p">:</span> <span class="kc">chartreuse</span><span class="p">;</span>
+  <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">margin-left</span><span class="p">:</span> <span class="mi">110</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">margin-right</span><span class="p">:</span> <span class="mi">110</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;wrap&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;left&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;right&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mid&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></td></tr></table>
+</div>
+</div>
+<h4 id="清除浮动">清除浮动</h4>
+
+<p>1.clear:both</p>
+
+<p>给最后一个不浮动的元素加上 clear:both，没有就加一个空元素</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-css" data-lang="css"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">clear</span> <span class="p">{</span>
+  <span class="k">clear</span><span class="p">:</span> <span class="kc">both</span><span class="p">;</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>2.bfc 清除浮动</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-css" data-lang="css"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">wrap</span> <span class="p">{</span>
+  <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
+  <span class="c">/*overflow: auto;*/</span>
+  <span class="c">/*position: absolute;*/</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="flex-布局">flex 布局</h3>
+
+<p><a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html">Flex 布局教程：语法篇</a></p>
+
+<p>这篇已经写的很好了，看看如何实现上面说的三列中间自适应的布局</p>
+
+<h4 id="三列中间自适应">三列中间自适应</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-css" data-lang="css"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">wrap</span> <span class="p">{</span>
+  <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">left</span> <span class="p">{</span>
+  <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">background</span><span class="p">:</span> <span class="kc">cadetblue</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">mid</span> <span class="p">{</span>
+  <span class="k">flex</span><span class="p">:</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">background</span><span class="p">:</span> <span class="kc">darkblue</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">right</span> <span class="p">{</span>
+  <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">background</span><span class="p">:</span> <span class="kc">violet</span><span class="p">;</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;wrap&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;left&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;right&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mid&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></td></tr></table>
+</div>
+</div>
+<h4 id="水平垂直居中">水平垂直居中</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-css" data-lang="css"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">wrap</span> <span class="p">{</span>
+  <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
+  <span class="k">justify-content</span><span class="p">:</span> <span class="n">cenrer</span><span class="p">;</span>
+  <span class="k">align-items</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h4 id="多个元素水平均匀分布">多个元素水平均匀分布</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-css" data-lang="css"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">wrap</span> <span class="p">{</span>
+  <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
+  <span class="k">justify-content</span><span class="p">:</span> <span class="kc">space</span><span class="o">-</span><span class="n">between</span><span class="p">;</span>
+  <span class="c">/* justify-content: space-around; */</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="ifc-和-bfc">ifc 和 bfc</h3>
+
+<h4 id="bfc">bfc</h4>
+
+<p>bfc，是一个独立的渲染区域，只有块级元素参与，规定内部的块级元素如何布局</p>
+
+<p>bfc 规则：</p>
+
+<ol>
+<li>内部的 box 会在垂直方向，一个接一个的放置</li>
+<li>box 垂直方向的距离有 margin 决定。同属一个 bfc 的两个相邻 box 会发生 margin 重叠</li>
+<li>每个元素的 margin-box 左边，与包含块的 border-box 接触。即使存在浮动也是如此</li>
+<li>bfc 的区域不会与 float-box 重叠</li>
+<li>bfc 就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素。</li>
+<li>计算 bfc 的高度时，浮动元素也参与计算</li>
+</ol>
+
+<p>有时，我们会利用 bfc 清除 margin 重叠，清除浮动，bfc 怎么生成呢？</p>
+
+<ol>
+<li>根元素或者包含根的元素</li>
+<li>浮动元素（float 不为 none）</li>
+<li>display 为 inline-block,flex,flow-root(新)的元素</li>
+<li>绝对定位元素（position 为 absolute 或 fixed）</li>
+</ol>
+
+<h4 id="ifc">ifc</h4>
+
+<p>规定行内元素如何布局</p>
+
+<p>ifc 规则：</p>
+
+<ol>
+<li>行内元素从容器的顶端开始，一个接一个水平布局</li>
+<li>水平 padding,border,margin 有效。垂直无效</li>
+<li>一个水平行中所有 inline-box 组成 line-box 的矩形区域，其高度就是容器的高度</li>
+</ol>
+
+<h3 id="line-height">line-height</h3>
+
+<p><a href="https://zhuanlan.zhihu.com/p/25808995">深入理解 CSS：字体度量、line-height 和 vertical-aligns</a></p>
+
+<h3 id="z-index-和层叠上下文">z-index 和层叠上下文</h3>
+
+<h4 id="z-index">z-index</h4>
+
+<p>z-index 设置属性在 z 轴的显示层级。通常来说 z-index 大的元素会覆盖小的元素</p>
+
+<p>对于一个已经定位的元素（position 不是 static）的元素，z-index 属性指定：</p>
+
+<ol>
+<li>元素在当前层叠上下文的层级</li>
+<li>创建一个新的层叠上下文</li>
+</ol>
+
+<h4 id="层叠上下文">层叠上下文</h4>
+
+<p><a href="https://www.zhangxinxu.com/wordpress/2016/01/understand-css-stacking-context-order-z-index/">深入理解 CSS 中的层叠上下文和层叠顺序</a></p>
+
+<p>上面 z-index 说到了层叠上下文，一个是指定当前层级，一个是创建层叠上下文。
+层叠上下文可以理解为一个封闭区域，同一层级的层叠上下文做对比</p>
+
+<p>创建层叠上下文：</p>
+
+<ol>
+<li>根元素（HTML）</li>
+<li>z-index 值不为 auto 的绝对定位/相对定位</li>
+<li>一个 z-index 值不为 auto 的 flex 项目 (flex item)，即：父元素 display: flex|inline-flex</li>
+<li>opacity 值小于 1 的元素（opcacity 元素不能设置 z-index，相当于 z-index=0）</li>
+<li>filter 不为 none 的元素</li>
+<li>perspective 值不为 none 的元素</li>
+<li>position: fixed</li>
+<li>-webkit-overflow-scrolling: touch</li>
+</ol>
+
+<h3 id="clientwidth-offsetwidth-innerwidth">clientWidth,offsetWidth,innerWidth</h3>
+
+<p><img src="https://i.stack.imgur.com/Cl1IA.png" alt="image" /></p>
+
+<h2 id="扩展">扩展</h2>
+
+<h3 id="css-预处理器">css 预处理器</h3>
+
+<p>可以理解为 css 上层语言，可以编译成 css。</p>
+
+<p>常用的有 less，scss，可以使用一高级语法，比如嵌套，变量，函数等</p>
+
+<h3 id="css-后处理器">css 后处理器</h3>
+
+<p>可以理解为直接处理 css 文件</p>
+
+<p>postcss，一般用在 wepack 中，作为一个 loader，常用的功能有 css 兼容，rem 转换等</p>
+</article>
+    <footer class="post-footer">
+      
+      <ul class="post-tags">
+        
+          <li><a href="/tags/%E5%AD%A6%E4%B9%A0%E7%B3%BB%E5%88%97"><span class="tag">学习系列</span></a></li>
+        
+          <li><a href="/tags/css"><span class="tag">Css</span></a></li>
+        
+      </ul>
+      
+      <p class="post-copyright">
+        
+      </p>
+    </footer>
+    
+      <div id="gitment-container"></div>
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+  (function() {
+    var page_url = decodeURI("/post/%E5%AD%A6%E4%B9%A0css%E7%9F%A5%E8%AF%86%E7%82%B9/");
+    var page_uniqueid = "784ee3eb646e61cfb11a56033cdcb20f";
+
+    if (page_url.length >= 50) {
+      console.log("文章的路径", "[" + page_url + "]:" + page_url.length, "超过了50个字符，使用 UniqueID 设置评论ID");
+      comment_id = page_uniqueid
+    } else {
+      comment_id = page_url
+    }
+
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      console.log(comment_id, comment_id.length);
+      document.getElementById('gitment-container').innerHTML = 'Gitment comments not available by default when the website is previewed locally.';
+    } else {
+      var gitment = new Gitment({
+        id: comment_id,
+        owner:  null ,
+        repo:  null ,
+        oauth: {
+          client_id:  null ,
+          client_secret:  null ,
+        },
+      })
+      gitment.render('gitment-container');
+    }
+  })();
+</script>
+
+      
+    
+  </section>
+  
+<footer class="site-footer">
+  <p>© 2017-2019 eago</p>
+  <p>Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> with theme <a href="https://github.com/laozhu/hugo-nuo" target="_blank" rel="noopener">Nuo</a>.</p>
+  
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@15.0.0/dist/smooth-scroll.min.js"></script>
+
+
+
+<script async src="https://cdn.jsdelivr.net/npm/video.js@7.3.0/dist/video.min.js"></script>
+
+
+
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\\[','\\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+      extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    },
+  });
+</script>
+<script type="text/x-mathjax-config">
+  // Fix <code> tags after MathJax finishes running. This is a
+  // hack to overcome a shortcoming of Markdown. Discussion at
+  // https://github.com/mojombo/jekyll/issues/199
+  MathJax.Hub.Queue(() => {
+    MathJax.Hub.getAllJax().map(v => v.SourceElement().parentNode.className += ' has-jax');
+  });
+</script>
+
+
+
+<script src="/scripts/index.min.js"></script>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('\/service-worker.js').then(function() {
+      console.log('[ServiceWorker] Registered');
+    });
+  }
+</script>
+
+
+
+
+
+
+
+
+  </body>
+</html>

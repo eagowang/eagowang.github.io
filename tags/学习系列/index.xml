@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>学习系列 on eago</title>
+    <link>https://eagowang.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%B3%BB%E5%88%97/</link>
+    <description>Recent content in 学习系列 on eago</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 18 Jul 2019 10:58:09 +0800</lastBuildDate>
+    
+	<atom:link href="https://eagowang.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%B3%BB%E5%88%97/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[学习]正则表达式</title>
+      <link>https://eagowang.github.io/post/%E5%AD%A6%E4%B9%A0%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</link>
+      <pubDate>Thu, 18 Jul 2019 10:58:09 +0800</pubDate>
+      
+      <guid>https://eagowang.github.io/post/%E5%AD%A6%E4%B9%A0%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</guid>
+      <description>一直都只会写简单的正则，平时也基本不写，就连 test，exec，match 是谁的方法都分不清。笔记主要参考《javascript 正则表达式迷</description>
+    </item>
+    
+    <item>
+      <title>[学习]前端模块化</title>
+      <link>https://eagowang.github.io/post/%E5%AD%A6%E4%B9%A0%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96/</link>
+      <pubDate>Thu, 04 Jul 2019 10:49:08 +0800</pubDate>
+      
+      <guid>https://eagowang.github.io/post/%E5%AD%A6%E4%B9%A0%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96/</guid>
+      <description>AMD Asynchronous Module Definition，意思是异步模块定义。 用法： 1 2 3 4 // 定义模块 define(id?, dependencies?, factory) // 引用模块 require([module], callback) 对于依赖的模块AMD是提前执行，代表是Requi</description>
+    </item>
+    
+    <item>
+      <title>[学习]动态nodeList、静态nodeList</title>
+      <link>https://eagowang.github.io/post/%E5%AD%A6%E4%B9%A0%E5%8A%A8%E6%80%81nodelist%E9%9D%99%E6%80%81nodelist/</link>
+      <pubDate>Fri, 28 Jun 2019 09:41:03 +0800</pubDate>
+      
+      <guid>https://eagowang.github.io/post/%E5%AD%A6%E4%B9%A0%E5%8A%A8%E6%80%81nodelist%E9%9D%99%E6%80%81nodelist/</guid>
+      <description>NodeList NodeList 是一个节点的集合，是由 Node.childNodes 和 document.querySelectorAll 返回的。 动态 NodeList：如果文档树中的节点树发生变化，则已存在的实时 NodeList 对象也会随之变化</description>
+    </item>
+    
+    <item>
+      <title>[学习]去抖、节流</title>
+      <link>https://eagowang.github.io/post/%E5%AD%A6%E4%B9%A0%E5%8E%BB%E6%8A%96%E8%8A%82%E6%B5%81/</link>
+      <pubDate>Thu, 27 Jun 2019 18:45:53 +0800</pubDate>
+      
+      <guid>https://eagowang.github.io/post/%E5%AD%A6%E4%B9%A0%E5%8E%BB%E6%8A%96%E8%8A%82%E6%B5%81/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>[学习]排序</title>
+      <link>https://eagowang.github.io/post/%E5%AD%A6%E4%B9%A0%E6%8E%92%E5%BA%8F/</link>
+      <pubDate>Tue, 18 Jun 2019 17:48:36 +0800</pubDate>
+      
+      <guid>https://eagowang.github.io/post/%E5%AD%A6%E4%B9%A0%E6%8E%92%E5%BA%8F/</guid>
+      <description>公用的数据 1 var nums = [4, 2, 16, 12, 32, 21, 33, 1]; array.sort 1 2 3 4 5 6 7 8 9 nums.sort(function(a, b) { if (a &amp;lt; b) { return -1; } if (a &amp;gt; b) { return 1; } return 0; }); 冒泡排序 依次交换相邻的两个数字的顺序（大的</description>
+    </item>
+    
+    <item>
+      <title>[学习]promise</title>
+      <link>https://eagowang.github.io/post/%E5%AD%A6%E4%B9%A0%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AApromise/</link>
+      <pubDate>Mon, 17 Jun 2019 09:59:11 +0800</pubDate>
+      
+      <guid>https://eagowang.github.io/post/%E5%AD%A6%E4%B9%A0%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AApromise/</guid>
+      <description>实现 以下是实现和一些关键注释 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56</description>
+    </item>
+    
+    <item>
+      <title>[学习]microtask,macrotask</title>
+      <link>https://eagowang.github.io/post/%E5%AD%A6%E4%B9%A0microtaskmacrotask/</link>
+      <pubDate>Fri, 14 Jun 2019 21:28:59 +0800</pubDate>
+      
+      <guid>https://eagowang.github.io/post/%E5%AD%A6%E4%B9%A0microtaskmacrotask/</guid>
+      <description>Tasks, microtasks, queues and schedules 用一句话概括，就是一个 macrotask 中出现的 mircotask 都在这一次 eventloop 中执行，出现的 macrotask 需要在新的 eventloop 执行 macrotask(task) setTimeout = setInterval setImmediate requestAnimationFrame I/O UI rendering microtask process.nextTick promise callback 例子： 1 2 3 4 5 6 7 8 9 10</description>
+    </item>
+    
+    <item>
+      <title>[学习]作用域、闭包、原型链</title>
+      <link>https://eagowang.github.io/post/%E5%AD%A6%E4%B9%A0%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%97%AD%E5%8C%85%E5%8E%9F%E5%9E%8B%E9%93%BE/</link>
+      <pubDate>Thu, 13 Jun 2019 19:16:04 +0800</pubDate>
+      
+      <guid>https://eagowang.github.io/post/%E5%AD%A6%E4%B9%A0%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%97%AD%E5%8C%85%E5%8E%9F%E5%9E%8B%E9%93%BE/</guid>
+      <description>作用域，闭包 es6 之前，js 只有全局作用域和函数作用域 1 2 3 4 5 6 7 8 9 10 11 console.log(foo); function func() { var bar = 1; return function() { console.log(bar++); }; } var foo = 123; var func2 = func(); func2(); //1 func2(); //2 这段代码有两个阶</description>
+    </item>
+    
+    <item>
+      <title>[学习]css知识点</title>
+      <link>https://eagowang.github.io/post/%E5%AD%A6%E4%B9%A0css%E7%9F%A5%E8%AF%86%E7%82%B9/</link>
+      <pubDate>Wed, 12 Jun 2019 13:46:55 +0800</pubDate>
+      
+      <guid>https://eagowang.github.io/post/%E5%AD%A6%E4%B9%A0css%E7%9F%A5%E8%AF%86%E7%82%B9/</guid>
+      <description>基础 盒子模型 margin,border,padding,content(外边距，边框，内边距，内容) 常说的元素的 width，height 指的</description>
+    </item>
+    
+    <item>
+      <title>[学习]html知识点</title>
+      <link>https://eagowang.github.io/post/%E5%AD%A6%E4%B9%A0html%E7%9F%A5%E8%AF%86%E7%82%B9/</link>
+      <pubDate>Wed, 12 Jun 2019 09:58:58 +0800</pubDate>
+      
+      <guid>https://eagowang.github.io/post/%E5%AD%A6%E4%B9%A0html%E7%9F%A5%E8%AF%86%E7%82%B9/</guid>
+      <description>doctype doctype 声明不是 html 标签，用来告诉浏览器当前页面使用哪种 html 版本 html4.01 中，需要引入 dtd（文档类型声明），因为 html4.01 基于 SGML（standard generalized markup lan</description>
+    </item>
+    
+    <item>
+      <title>[学习]学习大纲</title>
+      <link>https://eagowang.github.io/post/%E5%AD%A6%E4%B9%A0%E5%AD%A6%E4%B9%A0%E5%A4%A7%E7%BA%B2/</link>
+      <pubDate>Tue, 11 Jun 2019 18:17:06 +0800</pubDate>
+      
+      <guid>https://eagowang.github.io/post/%E5%AD%A6%E4%B9%A0%E5%AD%A6%E4%B9%A0%E5%A4%A7%E7%BA%B2/</guid>
+      <description>计划 45 天系统整理一下前端知识，并整理出笔记 脑图</description>
+    </item>
+    
+  </channel>
+</rss>
