@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>闭包 on eago</title>
-    <link>http://localhost:1313/tags/%E9%97%AD%E5%8C%85/</link>
+    <link>https://eagowang.github.io/tags/%E9%97%AD%E5%8C%85/</link>
     <description>Recent content in 闭包 on eago</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 13 Jun 2019 19:16:04 +0800</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/%E9%97%AD%E5%8C%85/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://eagowang.github.io/tags/%E9%97%AD%E5%8C%85/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>[学习]作用域、闭包、原型链</title>
-      <link>http://localhost:1313/post/%E5%AD%A6%E4%B9%A0%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%97%AD%E5%8C%85%E5%8E%9F%E5%9E%8B%E9%93%BE/</link>
+      <link>https://eagowang.github.io/post/%E5%AD%A6%E4%B9%A0%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%97%AD%E5%8C%85%E5%8E%9F%E5%9E%8B%E9%93%BE/</link>
       <pubDate>Thu, 13 Jun 2019 19:16:04 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/%E5%AD%A6%E4%B9%A0%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%97%AD%E5%8C%85%E5%8E%9F%E5%9E%8B%E9%93%BE/</guid>
+      <guid>https://eagowang.github.io/post/%E5%AD%A6%E4%B9%A0%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%97%AD%E5%8C%85%E5%8E%9F%E5%9E%8B%E9%93%BE/</guid>
       <description>作用域，闭包 es6 之前，js 只有全局作用域和函数作用域 1 2 3 4 5 6 7 8 9 10 11 console.log(foo); function func() { var bar = 1; return function() { console.log(bar++); }; } var foo = 123; var func2 = func(); func2(); //1 func2(); //2 这段代码有两个阶</description>
     </item>
     

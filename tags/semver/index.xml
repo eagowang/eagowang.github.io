@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>semver on eago</title>
-    <link>http://localhost:1313/tags/semver/</link>
+    <link>https://eagowang.github.io/tags/semver/</link>
     <description>Recent content in semver on eago</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 25 Mar 2019 13:51:20 +0800</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/semver/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://eagowang.github.io/tags/semver/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>语义化版本</title>
-      <link>http://localhost:1313/post/%E8%AF%AD%E4%B9%89%E5%8C%96%E7%89%88%E6%9C%AC/</link>
+      <link>https://eagowang.github.io/post/%E8%AF%AD%E4%B9%89%E5%8C%96%E7%89%88%E6%9C%AC/</link>
       <pubDate>Mon, 25 Mar 2019 13:51:20 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/%E8%AF%AD%E4%B9%89%E5%8C%96%E7%89%88%E6%9C%AC/</guid>
+      <guid>https://eagowang.github.io/post/%E8%AF%AD%E4%B9%89%E5%8C%96%E7%89%88%E6%9C%AC/</guid>
       <description>版本格式 主版本号.次版本号.修订号，版本号递增规则如下： 主版本号（major）：当你做了不兼容的 API 修改 次版本号（minor）：当你做了向下兼</description>
     </item>
     

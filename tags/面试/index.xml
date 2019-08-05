@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>面试 on eago</title>
-    <link>http://localhost:1313/tags/%E9%9D%A2%E8%AF%95/</link>
+    <link>https://eagowang.github.io/tags/%E9%9D%A2%E8%AF%95/</link>
     <description>Recent content in 面试 on eago</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 17 Jun 2019 22:37:14 +0800</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/%E9%9D%A2%E8%AF%95/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://eagowang.github.io/tags/%E9%9D%A2%E8%AF%95/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>[面试]问题</title>
-      <link>http://localhost:1313/post/%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98/</link>
+      <link>https://eagowang.github.io/post/%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98/</link>
       <pubDate>Mon, 17 Jun 2019 22:37:14 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98/</guid>
+      <guid>https://eagowang.github.io/post/%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98/</guid>
       <description>面试问题 闭包，原型链 es6 class 和原型的区别，有没有私有属性，为什么？ 服务端渲染 前端监控 sentry 原理 react-router 原理 前端从输入 url 到展示页面，经历了什么 全站优化 webpack 原理</description>
     </item>
     
