@@ -2,48 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>git on eago</title>
-    <link>https://eagowang.github.io/tags/git/</link>
+    <link>http://localhost:1313/tags/git/</link>
     <description>Recent content in git on eago</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 23 Jul 2019 08:36:27 +0800</lastBuildDate>
     
-	<atom:link href="https://eagowang.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://localhost:1313/tags/git/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>[Git]git学习（三）</title>
-      <link>https://eagowang.github.io/post/gitgit%E5%AD%A6%E4%B9%A0%E4%B8%89/</link>
+      <link>http://localhost:1313/post/gitgit%E5%AD%A6%E4%B9%A0%E4%B8%89/</link>
       <pubDate>Tue, 23 Jul 2019 08:36:27 +0800</pubDate>
       
-      <guid>https://eagowang.github.io/post/gitgit%E5%AD%A6%E4%B9%A0%E4%B8%89/</guid>
+      <guid>http://localhost:1313/post/gitgit%E5%AD%A6%E4%B9%A0%E4%B8%89/</guid>
       <description>分支简介 Git 保存的不是文件的变化或差异，而是一系列不同时刻的文件快照。 在进行提交操作时，Git 会保存一个提交对象。包含一个指向内容快照的指针，</description>
     </item>
     
     <item>
       <title>[Git]git学习（二）</title>
-      <link>https://eagowang.github.io/post/gitgit%E5%AD%A6%E4%B9%A0%E4%BA%8C/</link>
+      <link>http://localhost:1313/post/gitgit%E5%AD%A6%E4%B9%A0%E4%BA%8C/</link>
       <pubDate>Mon, 22 Jul 2019 15:49:08 +0800</pubDate>
       
-      <guid>https://eagowang.github.io/post/gitgit%E5%AD%A6%E4%B9%A0%E4%BA%8C/</guid>
+      <guid>http://localhost:1313/post/gitgit%E5%AD%A6%E4%B9%A0%E4%BA%8C/</guid>
       <description>获取仓库 git init git clone 记录每次更新到仓库 工作目录下的每一个文件都不外乎这两种状态：已跟踪或未跟踪。 已跟踪：已跟踪的文件是指那些被纳入了版本控制的文</description>
     </item>
     
     <item>
       <title>[git]git学习（一）</title>
-      <link>https://eagowang.github.io/post/gitgit%E5%AD%A6%E4%B9%A0%E4%B8%80/</link>
+      <link>http://localhost:1313/post/gitgit%E5%AD%A6%E4%B9%A0%E4%B8%80/</link>
       <pubDate>Mon, 22 Jul 2019 13:58:29 +0800</pubDate>
       
-      <guid>https://eagowang.github.io/post/gitgit%E5%AD%A6%E4%B9%A0%E4%B8%80/</guid>
+      <guid>http://localhost:1313/post/gitgit%E5%AD%A6%E4%B9%A0%E4%B8%80/</guid>
       <description>注:内容全部为git pro摘要 我大概知道这些命令 1 2 3 4 5 6 7 8 9 10 11 12 13 // 提交 git add git commit git push // 拉取 git clone git pull git fetch git merge // 分支 git checkout git branch git tag 日常工作</description>
     </item>
     
     <item>
       <title>Git Submodule</title>
-      <link>https://eagowang.github.io/post/git-submodule/</link>
+      <link>http://localhost:1313/post/git-submodule/</link>
       <pubDate>Thu, 30 May 2019 17:08:10 +0800</pubDate>
       
-      <guid>https://eagowang.github.io/post/git-submodule/</guid>
+      <guid>http://localhost:1313/post/git-submodule/</guid>
       <description>场景描述：比如这个 hugo 博客，整个博客是一个 git 仓库，生成的 public 文件对应一个 git 仓库 添加子模块 在项目根目录 1 git add submodule git@github.com:eagowang/eagowang.github.io.git public 这条命令会自动 clone，并生成</description>
     </item>
     

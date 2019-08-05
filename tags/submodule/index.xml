@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>submodule on eago</title>
-    <link>https://eagowang.github.io/tags/submodule/</link>
+    <link>http://localhost:1313/tags/submodule/</link>
     <description>Recent content in submodule on eago</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 30 May 2019 17:08:10 +0800</lastBuildDate>
     
-	<atom:link href="https://eagowang.github.io/tags/submodule/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://localhost:1313/tags/submodule/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Git Submodule</title>
-      <link>https://eagowang.github.io/post/git-submodule/</link>
+      <link>http://localhost:1313/post/git-submodule/</link>
       <pubDate>Thu, 30 May 2019 17:08:10 +0800</pubDate>
       
-      <guid>https://eagowang.github.io/post/git-submodule/</guid>
+      <guid>http://localhost:1313/post/git-submodule/</guid>
       <description>场景描述：比如这个 hugo 博客，整个博客是一个 git 仓库，生成的 public 文件对应一个 git 仓库 添加子模块 在项目根目录 1 git add submodule git@github.com:eagowang/eagowang.github.io.git public 这条命令会自动 clone，并生成</description>
     </item>
     

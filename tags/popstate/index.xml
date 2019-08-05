@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>popState on eago</title>
-    <link>https://eagowang.github.io/tags/popstate/</link>
+    <link>http://localhost:1313/tags/popstate/</link>
     <description>Recent content in popState on eago</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 23 May 2019 11:40:44 +0800</lastBuildDate>
     
-	<atom:link href="https://eagowang.github.io/tags/popstate/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://localhost:1313/tags/popstate/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hack微信7.0.4 popState 刷新bug</title>
-      <link>https://eagowang.github.io/post/hack%E5%BE%AE%E4%BF%A17.0.4-popstate-%E5%88%B7%E6%96%B0bug/</link>
+      <link>http://localhost:1313/post/hack%E5%BE%AE%E4%BF%A17.0.4-popstate-%E5%88%B7%E6%96%B0bug/</link>
       <pubDate>Thu, 23 May 2019 11:40:44 +0800</pubDate>
       
-      <guid>https://eagowang.github.io/post/hack%E5%BE%AE%E4%BF%A17.0.4-popstate-%E5%88%B7%E6%96%B0bug/</guid>
+      <guid>http://localhost:1313/post/hack%E5%BE%AE%E4%BF%A17.0.4-popstate-%E5%88%B7%E6%96%B0bug/</guid>
       <description>原因：业务要求需要 pushState 一次 探索：发现微信 pushState 两次，且两次带上不同的 hash，再回退，不会有刷新 解决办法： 1 2 3 componentDidMount(){ window.history.replaceState({fix: true}, &amp;#39;&amp;#39;, &amp;#39;#fix&amp;#39;) } 具体问题描述看： 安卓微</description>
     </item>
     
