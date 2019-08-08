@@ -12,12 +12,12 @@
     
     
     <item>
-      <title>[学习]前端模块化</title>
-      <link>https://eagowang.github.io/post/%E5%AD%A6%E4%B9%A0%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96/</link>
+      <title>前端模块化</title>
+      <link>https://eagowang.github.io/post/%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96/</link>
       <pubDate>Thu, 04 Jul 2019 10:49:08 +0800</pubDate>
       
-      <guid>https://eagowang.github.io/post/%E5%AD%A6%E4%B9%A0%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96/</guid>
-      <description>AMD Asynchronous Module Definition，意思是异步模块定义。 用法： 1 2 3 4 // 定义模块 define(id?, dependencies?, factory) // 引用模块 require([module], callback) 对于依赖的模块AMD是提前执行，代表是Requi</description>
+      <guid>https://eagowang.github.io/post/%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96/</guid>
+      <description>AMD Asynchronous Module Definition，意思是异步模块定义。 用法： 1 2 3 4 // 定义模块 define(id?, dependencies?, factory) // 引用模块 require([module], callback) 对于依赖的模块 AMD 是提前执行，代表是 RequireJS 例子： 1 2 3</description>
     </item>
     
   </channel>

@@ -12,11 +12,11 @@
     
     
     <item>
-      <title>Taro开发小程序总结</title>
-      <link>https://eagowang.github.io/post/taro%E5%BC%80%E5%8F%91%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%80%BB%E7%BB%93/</link>
+      <title>[小程序]Taro开发小程序总结</title>
+      <link>https://eagowang.github.io/post/%E5%B0%8F%E7%A8%8B%E5%BA%8Ftaro%E5%BC%80%E5%8F%91%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%80%BB%E7%BB%93/</link>
       <pubDate>Thu, 23 May 2019 11:29:41 +0800</pubDate>
       
-      <guid>https://eagowang.github.io/post/taro%E5%BC%80%E5%8F%91%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%80%BB%E7%BB%93/</guid>
+      <guid>https://eagowang.github.io/post/%E5%B0%8F%E7%A8%8B%E5%BA%8Ftaro%E5%BC%80%E5%8F%91%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%80%BB%E7%BB%93/</guid>
       <description>小程序 小程序可以使用字体图标，下载字体文件到本地，将 iconfont.css 中的 font-face 替换成在线地址即可 动态删减小程序 tabbar item，会出现抖动。原因是每个 page 都有一个 tabbar 实</description>
     </item>
     

@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8" />
+
+  
+  <title>前端模块化</title>
+
+  
+  
+  <link href="//cdn.jsdelivr.net" rel="dns-prefetch">
+  <link href="//cdnjs.cloudflare.com" rel="dns-prefetch">
+  
+  <link href="//at.alicdn.com" rel="dns-prefetch">
+  
+  <link href="//fonts.googleapis.com" rel="dns-prefetch">
+  <link href="//fonts.gstatic.com" rel="dns-prefetch">
+  
+  
+  <link href="//imsun.github.io" rel="dns-prefetch">
+  
+  
+
+  
+
+  
+  <meta name="author" content="eago">
+  <meta name="description" content="AMD Asynchronous Module Definition，意思是异步模块定义。 用法： 1 2 3 4 // 定义模块 define(id?, dependencies?, factory) // 引用模块 require([module], callback) 对于依赖的模块 AMD 是提前执行，代表是 RequireJS 例子： 1 2 3">
+
+  
+  
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@gohugoio">
+    <meta name="twitter:title" content="前端模块化">
+    <meta name="twitter:description" content="AMD Asynchronous Module Definition，意思是异步模块定义。 用法： 1 2 3 4 // 定义模块 define(id?, dependencies?, factory) // 引用模块 require([module], callback) 对于依赖的模块 AMD 是提前执行，代表是 RequireJS 例子： 1 2 3">
+    <meta name="twitter:image" content="/images/avatar.png">
+  
+
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="前端模块化">
+  <meta property="og:description" content="AMD Asynchronous Module Definition，意思是异步模块定义。 用法： 1 2 3 4 // 定义模块 define(id?, dependencies?, factory) // 引用模块 require([module], callback) 对于依赖的模块 AMD 是提前执行，代表是 RequireJS 例子： 1 2 3">
+  <meta property="og:url" content="https://eagowang.github.io/post/%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96/">
+  <meta property="og:image" content="/images/avatar.png">
+
+
+
+
+<meta name="generator" content="Hugo 0.56.1">
+
+
+<link rel="canonical" href="https://eagowang.github.io/post/%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96/">
+
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="format-detection" content="telephone=no,email=no,adress=no">
+<meta http-equiv="Cache-Control" content="no-transform">
+
+
+<meta name="robots" content="index,follow">
+<meta name="referrer" content="origin-when-cross-origin">
+
+
+
+
+
+
+
+<meta name="theme-color" content="#02b875">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="eago">
+<meta name="msapplication-tooltip" content="eago">
+<meta name='msapplication-navbutton-color' content="#02b875">
+<meta name="msapplication-TileColor" content="#02b875">
+<meta name="msapplication-TileImage" content="/icons/icon-144x144.png">
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/icon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-32x32.png">
+<link rel="icon" sizes="192x192" href="/icons/icon-192x192.png">
+<link rel="apple-touch-icon" href="/icons/icon-152x152.png">
+<link rel="manifest" href="/manifest.json">
+
+
+<link rel="preload" href="/styles/main-rendered.min.css" as="style">
+
+
+<link rel="preload" href="https://fonts.googleapis.com/css?family=Lobster" as="style">
+<link rel="preload" href="/images/avatar.png" as="image">
+<link rel="preload" href="/images/grey-prism.svg" as="image">
+
+
+<style>
+  body {
+    background: rgb(244, 243, 241) url('/images/grey-prism.svg') repeat fixed;
+  }
+</style>
+<link rel="stylesheet" href="/styles/main-rendered.min.css">
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.2/dist/medium-zoom.min.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/video.js@7.3.0/dist/video-js.min.css">
+
+
+
+  
+  
+<!--[if lte IE 8]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/videojs-ie8@1.1.2/dist/videojs-ie8.min.js"></script>
+<![endif]-->
+
+<!--[if lte IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/eligrey-classlist-js-polyfill@1.2.20180112/classList.min.js"></script>
+<![endif]-->
+
+
+</head>
+  <body>
+    <div class="suspension">
+      <a role="button" aria-label="Go to top" title="Go to top" class="to-top is-hide"><span class="icon icon-up" aria-hidden="true"></span></a>
+      
+        
+	<a role="button" aria-label="Go to comments" title="Go to comments" class="to-comment" href="#gitment-container"><span class="icon icon-comment" aria-hidden="true"></span></a>
+        
+      
+    </div>
+    
+    
+  <header class="site-header">
+  <a href="https://eagowang.github.io"><img class="avatar" src="/images/avatar.png" alt="Avatar"></a>
+  
+  <h2 class="title"><a href="https://eagowang.github.io">eago</a></h2>
+  
+  <p class="subtitle"></p>
+  <button class="menu-toggle" type="button" aria-label="Main Menu" aria-expanded="false" tab-index="0">
+    <span class="icon icon-menu" aria-hidden="true"></span>
+  </button>
+
+  <nav class="site-menu collapsed">
+    <h2 class="offscreen">Main Menu</h2>
+    <ul class="menu-list">
+      
+      
+      
+      
+        <li class="menu-item
+          
+          
+           is-active">
+          <a href="/">主页</a>
+        </li>
+      
+        <li class="menu-item
+          
+          
+          ">
+          <a href="/post/">归档</a>
+        </li>
+      
+        <li class="menu-item
+          
+          
+          ">
+          <a href="/tags/">标签</a>
+        </li>
+      
+        <li class="menu-item
+          
+          
+          ">
+          <a href="/categories/">分类</a>
+        </li>
+      
+        <li class="menu-item
+          
+          
+          ">
+          <a href="/post/resume/">简历</a>
+        </li>
+      
+    </ul>
+  </nav>
+  <nav class="social-menu collapsed">
+    <h2 class="offscreen">Social Networks</h2>
+    <ul class="social-list"></ul>
+  </nav>
+</header>
+
+  <section class="main post-detail">
+    <header class="post-header">
+      <h1 class="post-title">前端模块化</h1>
+      <p class="post-meta">@eago · Jul 4, 2019 · 2 min read</p>
+    </header>
+    <article class="post-content">
+
+<h2 id="amd">AMD</h2>
+
+<p>Asynchronous Module Definition，意思是异步模块定义。</p>
+
+<h3 id="用法">用法：</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 定义模块
+</span><span class="c1"></span><span class="nx">define</span><span class="p">(</span><span class="nx">id</span><span class="o">?</span><span class="p">,</span> <span class="nx">dependencies</span><span class="o">?</span><span class="p">,</span> <span class="nx">factory</span><span class="p">)</span>
+<span class="c1">// 引用模块
+</span><span class="c1"></span><span class="nx">require</span><span class="p">([</span><span class="nx">module</span><span class="p">],</span> <span class="nx">callback</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>对于依赖的模块 AMD 是提前执行，代表是 RequireJS</p>
+
+<h3 id="例子">例子：</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">define</span><span class="p">([</span><span class="s2">&#34;./a&#34;</span><span class="p">,</span> <span class="s2">&#34;./b&#34;</span><span class="p">],</span> <span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// 依赖一开始就写好
+</span><span class="c1"></span>  <span class="nx">a</span><span class="p">.</span><span class="nx">test</span><span class="p">();</span>
+  <span class="nx">b</span><span class="p">.</span><span class="nx">test</span><span class="p">();</span>
+<span class="p">});</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="cmd">CMD</h2>
+
+<p>CMD 即 Common Module Definition 通用模块定义。</p>
+
+<h3 id="用法-1">用法：</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">define</span><span class="p">(</span><span class="nx">id</span><span class="o">?</span><span class="p">,</span> <span class="nx">deps</span><span class="o">?</span><span class="p">,</span> <span class="nx">factory</span><span class="p">(</span><span class="nx">require</span><span class="p">,</span> <span class="nx">exports</span><span class="p">,</span> <span class="nx">module</span><span class="p">){})</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="例子-1">例子：</h3>
+
+<p>对于依赖的模块 CMD 是延迟执行，代表是 SeaJS</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">define</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">requie</span><span class="p">,</span> <span class="nx">exports</span><span class="p">,</span> <span class="nx">module</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="c1">//依赖可以就近书写
+</span><span class="c1"></span>    <span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./a&#39;</span><span class="p">);</span>
+    <span class="nx">a</span><span class="p">.</span><span class="nx">test</span><span class="p">();</span>
+
+    <span class="p">...</span>
+    <span class="c1">//软依赖
+</span><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="nx">status</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="kd">var</span> <span class="nx">b</span> <span class="o">=</span> <span class="nx">requie</span><span class="p">(</span><span class="s1">&#39;./b&#39;</span><span class="p">);</span>
+        <span class="nx">b</span><span class="p">.</span><span class="nx">test</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="amd-和-cmd-的区别">AMD 和 CMD 的区别</h2>
+
+<p>最明显的区别就是在模块定义时对依赖的处理不同</p>
+
+<ol>
+<li>AMD 推崇依赖前置，在定义模块的时候就要声明其依赖的模块</li>
+<li>CMD 推崇就近依赖，只有在用到某个模块时再去 require</li>
+</ol>
+
+<p>最大的区别是对依赖模块的执行时机处理不同（都是异步加载）</p>
+
+<h2 id="commonjs">CommonJS</h2>
+
+<p>CommonJS 运行时加载，引入的是值的拷贝，加载一次之后就会缓存到内存中</p>
+
+<h3 id="运行时加载"><strong>运行时加载</strong></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">file</span> <span class="o">=</span> <span class="s2">&#34;./a.js&#34;</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">A</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="nx">file</span><span class="p">);</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="引入的是值的拷贝"><strong>引入的是值的拷贝</strong></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// a.js
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">counter</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">add</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">counter</span><span class="o">++</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="nx">exports</span><span class="p">.</span><span class="nx">counter</span> <span class="o">=</span> <span class="nx">counter</span><span class="p">;</span>
+<span class="nx">exports</span><span class="p">.</span><span class="nx">add</span> <span class="o">=</span> <span class="nx">add</span><span class="p">;</span>
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// b.js
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;./a.js&#34;</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">.</span><span class="nx">counter</span><span class="p">);</span> <span class="c1">// 0
+</span><span class="c1"></span><span class="nx">a</span><span class="p">.</span><span class="nx">add</span><span class="p">();</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">.</span><span class="nx">counter</span><span class="p">);</span> <span class="c1">// 0
+</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="缓存到内存"><strong>缓存到内存</strong></h3>
+
+<p>CommonJS 的一个模块，就是一个脚本文件。require 命令第一次加载脚本，就会执行整个脚本，然后在内存生成一个对象</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-json" data-lang="json"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="err">id:</span> <span class="err">&#39;...&#39;,</span>  <span class="err">//</span> <span class="err">模块名</span>
+  <span class="err">exports:</span> <span class="err">{...</span><span class="p">}</span><span class="err">,</span> <span class="err">//</span> <span class="err">模块输出的各个接口</span>
+  <span class="err">loaded:</span> <span class="kc">true</span>  <span class="err">//</span> <span class="err">模块的脚本是否执行完毕</span>
+  <span class="err">...</span>
+<span class="err">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>再次 require，也不会再次执行该模块，而是到缓存中取值。</p>
+
+<h2 id="es6-module">ES6 Module</h2>
+
+<p>ES6 Module 是编译时加载（静态解析），引入的是值的引用</p>
+
+<h3 id="编译时加载"><strong>编译时加载</strong></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// ES6模块，只引入了stat， exists， readFile三个模块，其他方法不加载
+</span><span class="c1"></span><span class="k">import</span> <span class="p">{</span> <span class="nx">stat</span><span class="p">,</span> <span class="nx">exists</span><span class="p">,</span> <span class="nx">readFile</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;fs&#34;</span><span class="p">;</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="引入的是值的引用"><strong>引入的是值的引用</strong></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// a.mjs
+</span><span class="c1"></span><span class="k">export</span> <span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="k">export</span> <span class="kd">function</span> <span class="nx">changeName</span><span class="p">(</span><span class="nx">val</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">name</span> <span class="o">=</span> <span class="nx">val</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// b.mjs
+</span><span class="c1"></span><span class="k">import</span> <span class="p">{</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">changeName</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;./es6_a.mjs&#34;</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">name</span><span class="p">);</span> <span class="c1">// 1
+</span><span class="c1"></span><span class="nx">changeName</span><span class="p">(</span><span class="s2">&#34;haha&#34;</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">name</span><span class="p">);</span> <span class="c1">// haha
+</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="es6-模块与-commonjs-模块的差异">es6 模块与 CommonJS 模块的差异</h2>
+
+<p>两个重大差异：</p>
+
+<ul>
+<li>CommonJS 模块输出的是一个值的拷贝，ES6 模块输出的是值的引用。</li>
+<li>CommonJS 模块是运行时加载，ES6 模块是编译时加载（编译时输出接口）</li>
+</ul>
+
+<p>第二个差异是因为 CommonJS 加载的是一个对象（即 module.exports 属性），该对象只有在脚本运行完才会生成。而 ES6 模块不是对象，它的对外接口只是一种静态定义，在代码静态解析阶段就会生成。</p>
+
+<h2 id="参考">参考</h2>
+
+<ol>
+<li><a href="http://es6.ruanyifeng.com/#docs/module-loader">Module 的加载实现</a></li>
+<li><a href="https://juejin.im/post/5a422b036fb9a045211ef789">前端模块化，AMD 与 CMD 的区别</a></li>
+</ol>
+</article>
+    <footer class="post-footer">
+      
+      <ul class="post-tags">
+        
+          <li><a href="/tags/%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96"><span class="tag">前端模块化</span></a></li>
+        
+      </ul>
+      
+      <p class="post-copyright">
+        
+      </p>
+    </footer>
+    
+      <div id="gitment-container"></div>
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+  (function() {
+    var page_url = decodeURI("/post/%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96/");
+    var page_uniqueid = "a55d6d5dbfd6cbf4680c77f9287fed34";
+
+    if (page_url.length >= 50) {
+      console.log("文章的路径", "[" + page_url + "]:" + page_url.length, "超过了50个字符，使用 UniqueID 设置评论ID");
+      comment_id = page_uniqueid
+    } else {
+      comment_id = page_url
+    }
+
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      console.log(comment_id, comment_id.length);
+      document.getElementById('gitment-container').innerHTML = 'Gitment comments not available by default when the website is previewed locally.';
+    } else {
+      var gitment = new Gitment({
+        id: comment_id,
+        owner:  null ,
+        repo:  null ,
+        oauth: {
+          client_id:  null ,
+          client_secret:  null ,
+        },
+      })
+      gitment.render('gitment-container');
+    }
+  })();
+</script>
+
+      
+    
+  </section>
+  
+<footer class="site-footer">
+  <p>© 2017-2019 eago</p>
+  <p>Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> with theme <a href="https://github.com/laozhu/hugo-nuo" target="_blank" rel="noopener">Nuo</a>.</p>
+  
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@15.0.0/dist/smooth-scroll.min.js"></script>
+
+
+
+<script async src="https://cdn.jsdelivr.net/npm/video.js@7.3.0/dist/video.min.js"></script>
+
+
+
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\\[','\\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+      extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    },
+  });
+</script>
+<script type="text/x-mathjax-config">
+  // Fix <code> tags after MathJax finishes running. This is a
+  // hack to overcome a shortcoming of Markdown. Discussion at
+  // https://github.com/mojombo/jekyll/issues/199
+  MathJax.Hub.Queue(() => {
+    MathJax.Hub.getAllJax().map(v => v.SourceElement().parentNode.className += ' has-jax');
+  });
+</script>
+
+
+
+<script src="/scripts/index.min.js"></script>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('\/service-worker.js').then(function() {
+      console.log('[ServiceWorker] Registered');
+    });
+  }
+</script>
+
+
+
+
+
+
+
+
+  </body>
+</html>

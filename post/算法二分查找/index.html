@@ -138,9 +138,9 @@
     
     
   <header class="site-header">
-  <a href="https://eagowang.github.io/"><img class="avatar" src="/images/avatar.png" alt="Avatar"></a>
+  <a href="https://eagowang.github.io"><img class="avatar" src="/images/avatar.png" alt="Avatar"></a>
   
-  <h2 class="title"><a href="https://eagowang.github.io/">eago</a></h2>
+  <h2 class="title"><a href="https://eagowang.github.io">eago</a></h2>
   
   <p class="subtitle"></p>
   <button class="menu-toggle" type="button" aria-label="Main Menu" aria-expanded="false" tab-index="0">
@@ -247,14 +247,14 @@
 <pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">searchInsert</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">nums</span><span class="p">,</span> <span class="nx">target</span><span class="p">)</span> <span class="p">{</span>
   <span class="kd">var</span> <span class="nx">left</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
   <span class="kd">var</span> <span class="nx">right</span> <span class="o">=</span> <span class="nx">nums</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
-  <span class="k">while</span><span class="p">(</span><span class="nx">left</span> <span class="o">&lt;</span> <span class="nx">right</span><span class="p">){</span>
-      <span class="kd">var</span> <span class="nx">mid</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">((</span><span class="nx">left</span> <span class="o">+</span> <span class="nx">right</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">);</span>
-      <span class="k">if</span><span class="p">(</span><span class="nx">nums</span><span class="p">[</span><span class="nx">mid</span><span class="p">]</span> <span class="o">&lt;</span> <span class="nx">target</span><span class="p">){</span>
-          <span class="nx">left</span> <span class="o">=</span> <span class="nx">mid</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
-      <span class="p">}</span><span class="k">else</span> <span class="p">{</span>
-          <span class="nx">right</span> <span class="o">=</span> <span class="nx">mid</span>
-      <span class="p">}</span>
-  <span class="p">}</span>  
+  <span class="k">while</span> <span class="p">(</span><span class="nx">left</span> <span class="o">&lt;</span> <span class="nx">right</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">mid</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">((</span><span class="nx">left</span> <span class="o">+</span> <span class="nx">right</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">nums</span><span class="p">[</span><span class="nx">mid</span><span class="p">]</span> <span class="o">&lt;</span> <span class="nx">target</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">left</span> <span class="o">=</span> <span class="nx">mid</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="nx">right</span> <span class="o">=</span> <span class="nx">mid</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
   <span class="k">return</span> <span class="nx">left</span><span class="p">;</span>
 <span class="p">};</span>
 </code></pre></td></tr></table>
@@ -264,7 +264,7 @@
       
       <ul class="post-tags">
         
-          <li><a href="/tags/%E4%BA%8C%E5%8F%89%E6%9F%A5%E6%89%BE"><span class="tag">二叉查找</span></a></li>
+          <li><a href="/tags/%E7%AE%97%E6%B3%95"><span class="tag">算法</span></a></li>
         
       </ul>
       
