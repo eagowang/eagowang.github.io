@@ -17,7 +17,7 @@
       <pubDate>Thu, 08 Aug 2019 17:46:44 +0800</pubDate>
       
       <guid>https://eagowang.github.io/post/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E4%B8%80%E6%AC%A1%E5%8A%A8%E6%80%81%E5%AF%BC%E5%85%A5%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
-      <description>&lt;p&gt;Cut out summary from your post content here.&lt;/p&gt;</description>
+      <description>&lt;p&gt;使用 webpack 的 import(&amp;lsquo;./a&amp;rsquo;).then(A=&amp;gt;{})动态引入模块后遇到的问题&lt;/p&gt;</description>
     </item>
     
     <item>
