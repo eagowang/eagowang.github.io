@@ -6,10 +6,19 @@
     <description>Recent content on eago</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 08 Aug 2019 17:46:44 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 29 Aug 2019 15:32:30 +0800</lastBuildDate>
     
 	<atom:link href="https://eagowang.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[工作]记一次微信文章转h5</title>
+      <link>https://eagowang.github.io/post/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E4%B8%80%E6%AC%A1%E5%BE%AE%E4%BF%A1%E6%96%87%E7%AB%A0%E8%BD%ACh5/</link>
+      <pubDate>Thu, 29 Aug 2019 15:32:30 +0800</pubDate>
+      
+      <guid>https://eagowang.github.io/post/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E4%B8%80%E6%AC%A1%E5%BE%AE%E4%BF%A1%E6%96%87%E7%AB%A0%E8%BD%ACh5/</guid>
+      <description>&lt;p&gt;记一次微信文章转 h5 遇到的问题及解决方案&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>[工作]记一次动态导入遇到的问题</title>
